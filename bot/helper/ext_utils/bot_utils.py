@@ -32,7 +32,7 @@ class MirrorStatus:
 
 
 PROGRESS_MAX_SIZE = 100 // 8
-PROGRESS_INCOMPLETE = ['□', '□', '□', '□', '□', '□', '□', '□']
+PROGRESS_INCOMPLETE = ['□', '□', '□', '□', '□', '□', '□']
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -129,8 +129,7 @@ def get_readable_message():
                         msg += f"\n<b> 📤Uploaded :</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
                     else:
                         msg += f"\n<b> 📥Downloaded :</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
-                    msg += f"\n<b> ⚡️Speed :</b> <code>{download.speed()}</code>" \
-                            f"\n<b> ⏰ETA :</b> <code>{download.eta()}</code> "
+                    msg += f"\n<b> ⚡️Speed :</b> <code>{download.speed()} | <b>ETA:</b> {download.eta()} " 
                     # if hasattr(download, 'is_torrent'):
                     try:
                         msg += f"\n<b> 🌾Seeders :</b> <code>{download.aria_download().num_seeders}</code>" \
