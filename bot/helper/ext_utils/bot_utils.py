@@ -129,7 +129,8 @@ def get_readable_message():
                         msg += f"\n<b> 📤Uploaded :</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
                     else:
                         msg += f"\n<b> 📥Downloaded :</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
-                    msg += f"\n<b> ⚡️Speed :</b> <code>{download.speed()} | <b>ETA:</b> {download.eta()} " 
+                    msg += f"\n<b> ⚡️Speed :</b> <code>{download.speed()}</code>"
+                            f"\n<b> ⏰ETA :</b> <code>{download.eta()}</code> "
                     # if hasattr(download, 'is_torrent'):
                     try:
                         msg += f"\n<b> 🌾Seeders :</b> <code>{download.aria_download().num_seeders}</code>" \
