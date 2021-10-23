@@ -679,7 +679,7 @@ class GoogleDriveHelper:
                 msg += f'\n<b> 📦Size : </b><code>{get_readable_file_size(self.total_bytes)}</code>'
                 msg += f'\n<b> 🌀Type : </b><code>Folder</code>'
                 msg += f'\n<b> 🗳Powered by : SAMURAi</b>'
-                else:
+            else:
                 msg += f'<b> 📂Filename : </b><code>{name}</code>'
                 try:
                     typee = drive_file['mimeType']
