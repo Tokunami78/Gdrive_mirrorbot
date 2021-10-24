@@ -133,8 +133,8 @@ def get_readable_message():
                             f"\n<b> ⏰ETA :</b> <code>{download.eta()}</code> "
                     # if hasattr(download, 'is_torrent'):
                     try:
-                        msg += f"\n<b> Seeders :</b> <code>{download.aria_download().num_seeders}</code>" \
-                            f" | <b> Peers :</b> <code>{download.aria_download().connections}</code>"
+                        msg += f"\n<b> 🌱Seeders :</b> <code>{download.aria_download().num_seeders}</code>" \
+                            f" | <b> 👨‍👦‍👦Peers :</b> <code>{download.aria_download().connections}</code>"
                     except:
                         pass
                     try:
