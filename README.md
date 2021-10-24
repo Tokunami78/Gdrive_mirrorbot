@@ -178,7 +178,7 @@ sudo docker run mirrorbot
 ```
 
 
-## bot commands will be set automatically 
+
 
 
 ## some of the commands are changed because the group members use them without any reason 
