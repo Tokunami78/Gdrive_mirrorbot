@@ -153,12 +153,12 @@ class MirrorListener(listeners.MirrorListeners):
 
     def onUploadComplete(self, link: str, size, files, folders, typ):
         with download_dict_lock:
-            msg = f'<b> 📂Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b> 📦Size : </b><code>{size}</code>'
+            msg = f'<b>Filename : </b><code>{download_dict[self.uid].name()}</code>\n <b>Size : </b><code>{size}</code>'
             if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
-                msg += '\n<b> 🌀Type : </b><code>Folder</code>'
-                msg += f'\n<b> 🗳Powerd by : SAMURAi</b>'
+                msg += '\n<b>Type : </b><code>Folder</code>'
+                msg += f'\n<b>Powerd by : SAMURAi</b>'
             else:
-                msg += f'\n<b> 🗳Powerd by : SAMURAi</b>'
+                msg += f'\n<b>Powerd by : SAMURAi</b>'
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
