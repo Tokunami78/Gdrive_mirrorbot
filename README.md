@@ -40,7 +40,7 @@ owner of this repo :- [AYUSH](https://github.com/ayushteke)
 - Shortener support
 - Custom Buttons
 - Custom Filename (Only for url, telegram files and ytdl. Not for mega links and magnet/torrents)
-- Speedtest with picture results
+- Speedtest result
 - Extracting password protected files and using custom filename see these examples:
 - [custom file name examples ](https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20)
 - Bot can extract the following types of files
