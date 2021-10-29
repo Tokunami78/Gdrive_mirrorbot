@@ -14,8 +14,6 @@ owner of this repo :- [AYUSH](https://github.com/ayushteke)
 ## Features supported:
 
 - Mirroring direct download links to Google Drive
-- qBittorrent supported
-- selection of files before downloading torrent
 - Limiting size Torrent/Direct, Tar/Unzip, Mega, cloning Google Drive support
 - Stop duplicate cloning Google Drive & mirroring Mega support
 - Create Tar Google Drive folder
@@ -34,7 +32,7 @@ owner of this repo :- [AYUSH](https://github.com/ayushteke)
 - Limiting size Torrent/Direct, Mega, cloning Google Drive support
 - Mirror telegram files
 - Delete files from drive
-- Check Heroku dynos stats
+
 - Nyaa.si and Sukebei Torrent search
 - Shell and Executor
 - Shortener support
