@@ -32,7 +32,7 @@ class MirrorStatus:
 
 
 PROGRESS_MAX_SIZE = 100 // 8
-PROGRESS_INCOMPLETE = ['□', '□', '□', '□', '□', '□', '□', '□']
+PROGRESS_INCOMPLETE = ['□', '□', '□', '□', '□', '□', '□']
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -96,7 +96,7 @@ def get_progress_bar_string(status):
         p = round(completed * 100 / total)
     p = min(max(p, 0), 100)
     cFull = p // 8
-    cPart = p % 8 - 1
+    cPart = p % 8 - 0
     p_str = '■' * cFull
     if cPart >= 0:
         p_str += PROGRESS_INCOMPLETE[cPart]
