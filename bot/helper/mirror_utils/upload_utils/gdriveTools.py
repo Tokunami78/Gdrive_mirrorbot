@@ -676,7 +676,6 @@ class GoogleDriveHelper:
                 msg += f'<b>Filename : </b><code>{name}</code>'
                 msg += f'\n<b>Size : </b><code>{get_readable_file_size(self.total_bytes)}</code>'
                 msg += f'\n<b>Type : </b><code>Folder</code>'
-                msg += f'\n<b>Powered by : SAMURAi</b>'
             else:
                 msg += f'<b>Filename : </b><code>{name}</code>'
                 try:
@@ -688,7 +687,6 @@ class GoogleDriveHelper:
                     self.gDrive_file(**drive_file)
                     msg += f'\n<b>Size : </b><code>{get_readable_file_size(self.total_bytes)}</code>'
                     msg += f'\n<b>Type : </b><code>{typee}</code>'
-                    msg += f'\n<b>Powered by : SAMURAi</b>'
                 except TypeError:
                     pass
         except Exception as err:
