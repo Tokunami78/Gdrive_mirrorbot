@@ -380,21 +380,20 @@ class GoogleDriveHelper:
                     return "your clone has been stopped and cloned data has been deleted!", "cancelled"
                 msg += f'<b>Filename : </b><code>{meta.get("name")}</code>\n<b>Size: </b><code>{get_readable_file_size(self.transferred_size)}</code>'
                 msg += f'\n<b>Type : </b><code>Folder</code>'
-                msg += f'\n<b>Powerd by : SAMURAi</b>'
                 buttons = button_build.ButtonMaker()
                 if SHORTENER is not None and SHORTENER_API is not None:
                     surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={durl}&format=text').text
-                    buttons.buildbutton("🔗 Drive Link 🔗", surl)
+                    buttons.buildbutton("Drive Link", surl)
                 else:
-                    buttons.buildbutton("🔗 Drive Link 🔗", durl)
+                    buttons.buildbutton("Drive Link", durl)
                 if INDEX_URL is not None:
                     url_path = requests.utils.quote(f'{meta.get("name")}')
                     url = f'{INDEX_URL}/{url_path}/'
                     if SHORTENER is not None and SHORTENER_API is not None:
                         siurl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={url}&format=text').text
-                        buttons.buildbutton("☄️ Index Link ☄️", siurl)
+                        buttons.buildbutton("Index Link", siurl)
                     else:
-                        buttons.buildbutton("☄️ Index Link ☄️", url)
+                        buttons.buildbutton("Index Link", url)
                 if BUTTON_FOUR_NAME is not None and BUTTON_FOUR_URL is not None:
                     buttons.buildbutton(f"{BUTTON_FOUR_NAME}", f"{BUTTON_FOUR_URL}")
                 if BUTTON_FIVE_NAME is not None and BUTTON_FIVE_URL is not None:
@@ -408,16 +407,15 @@ class GoogleDriveHelper:
                 buttons = button_build.ButtonMaker()
                 if SHORTENER is not None and SHORTENER_API is not None:
                     surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={durl}&format=text').text
-                    buttons.buildbutton("🔗 Drive Link 🔗", surl)
+                    buttons.buildbutton("Drive Link", surl)
                 else:
-                    buttons.buildbutton("🔗 Drive Link 🔗", durl)
+                    buttons.buildbutton("Drive Link", durl)
                 try:
                     typeee = file.get('mimeType')
                 except:
                     typeee = 'File' 
                 try:
                     msg += f'\n<b>Size : </b><code>{get_readable_file_size(int(meta.get("size")))}</code>'
-                    msg += f'\n<b>Powerd by : SAMURAi</b> '
                 except TypeError:
                     pass
                 if INDEX_URL is not None:
@@ -427,13 +425,13 @@ class GoogleDriveHelper:
                     if SHORTENER is not None and SHORTENER_API is not None:
                         siurl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={url}&format=text').text
                         siurls = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={urls}&format=text').text
-                        buttons.buildbutton("☄️ Index Link ☄️", siurl)
+                        buttons.buildbutton("Index Link", siurl)
                         if VIEW_LINK:
-                            buttons.buildbutton(" View Link", siurls)
+                            buttons.buildbutton("View Link", siurls)
                     else:
-                        buttons.buildbutton("☄️ Index Link ☄️", url)
+                        buttons.buildbutton("Index Link", url)
                         if VIEW_LINK:
-                            buttons.buildbutton(" View Link", urls)
+                            buttons.buildbutton("View Link", urls)
                 if BUTTON_FOUR_NAME is not None and BUTTON_FOUR_URL is not None:
                     buttons.buildbutton(f"{BUTTON_FOUR_NAME}", f"{BUTTON_FOUR_URL}")
                 if BUTTON_FIVE_NAME is not None and BUTTON_FIVE_URL is not None:
@@ -556,7 +554,7 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'SAMURAi Mirror bot search',
+                                 title = 'Mirror bot search',
                                  author_name='Johnny Silverhand',
                                  author_url='https://t.me',
                                  html_content=content)
@@ -641,7 +639,7 @@ class GoogleDriveHelper:
 
             for content in self.telegraph_content :
                 self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                        title = 'SAMURAi Mirror bot search',
+                                                        title = 'Mirror bot search',
                                                         author_name='Johnny Sliverhand',
                                                         author_url='https://t.me',
                                                         html_content=content
